@@ -5,7 +5,7 @@ export async function downloadRoute(){
 
     request.setRequestHeader('Accept', 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8');
     request.setRequestHeader('Content-Type', 'application/json');
-    request.setRequestHeader('Authorization', '5b3ce3597851110001cf6248fffedf8d96224f68816f255633c06001');
+    //request.setRequestHeader('Authorization', '');
     let chosen = JSON.parse(sessionStorage.getItem("gekozenCafes"));
     let co = chosen.map((coord) => [coord.lon, coord.lat]);
 
