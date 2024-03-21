@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="icon" type="image/png" href="./img/start-icon.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body id="index_bg" class="blur">
+<header>
+    <script src="scripts/loadNavBar.js" onload="loadNewNavBar()"></script>
+</header>
+<main>
+    <div class="container center">
+        <p class="Title_Text">BarHopper</p>
+        <div class="card"><p class="hoofdletters title">Welkom bij BarHopper</p>
+            <p class="mooi">De ultieme combinatie van verkennen, genieten van heerlijke drankjes en een spannend
+                spel!</p>
+            <p>
+                Ben je op zoek naar een unieke manier om de bruisende stad Gent te ontdekken? Zoek niet verder!
+                <br> Onze website biedt je de perfecte route om door de stad te navigeren, terwijl je onderweg de beste
+                cafés bezoekt.
+                <br>
+                BarHopper is niet alleen een avontuurlijke kroegentocht, maar ook een spel waarin je het opneemt tegen
+                je vrienden.
+                <br>
+                Of je nu een lokale inwoner bent die op zoek is naar een nieuwe ervaring of een bezoeker die alles uit
+                zijn trip naar Gent wil halen,<br> BarHopper is dé activiteit die je niet mag missen.
+            </p>
+            <p class="mooi"> Hoe werkt het?</p>
+            <p>
+                BarHopper is dé ultieme combinatie van verkennen, genieten van heerlijke drankjes en een spannend
+                spel!<br>
+                Kies je start- en eindcafé en laat je verrassen met willekeurige routes langs alle cafés op onze
+                interactieve kaart.<br>
+                Bij elke stop zijn er leuke regels waaraan je groep zich moet houden om zo min mogelijk 'slagen' te
+                verzamelen
+                en bovenaan het klassement te eindigen.<br>
+                Daag je vrienden uit en beleef een onvergetelijke tijd in de charmante stad Gent.
+                Ontdek Gent op een heel nieuwe manier met BarHopper!
+            </p>
+            <p class="mooi">Begin je avontuur vandaag.</p>
+        </div>
+        <a href="mapPage.html">
+            <button class="img_button"><p class="button_text">Map</p><img class='button_img' src="img/map.png" alt="Map">
+            </button>
+        </a>
+        <a href="gamePage.html">
+            <button class="img_button"><p class="button_text">Game</p><img class='button_img' src="img/bar2.jpg" alt="Game">
+            </button>
+        </a>
+        <a href="algorithm.html">
+            <button class="img_button"><p class="button_text">Algoritme</p><img class='button_img'
+                                                                                src="img/algo.png" alt="Algoritme"></button>
+        </a>
+        <div class="card">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm"><p><strong>Genereer een route</strong></p>
+                        <p>Kies hoeveel je wilt wandelen door een radius in te geven, kies een eind- en startpunt en het
+                            aantal cafés die je wilt bezoeken.<br>
+                            Genereer een aantal cafés tot je tevreden bent en bereken de route met 1 van de
+                            algoritmes.</p> </div>
+                        <div class="col-sm"><p><strong>Speel de game</strong></p>
+                            <p>Eens je een route hebt kan je van start met het spel. <br>
+                                Geef alle namen in, lees de spelregels en proost op plezier, vriendschap en geweldige
+                                ervaringen!</p>
+                        </div>
+                        <div class="col-sm"><p><strong>Bekijk de algoritmes</strong></p>
+                            <p>Neem een kijkje naar de algoritmes die we gebruiken om de optimale route te berekenen.
+                                Vergelijk ze en zie de voor en nadelen van elk algoritme.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <script src="scripts/loadFooter.js" onload="loadNewFooter()"></script>
+</footer>
+</body>
+</html>

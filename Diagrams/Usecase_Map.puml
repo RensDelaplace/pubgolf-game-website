@@ -1,0 +1,37 @@
+@startuml Website
+
+
+skinparam actorStyle awesome
+actor "openrouteservice API" as API1
+actor "Gebruiker" as User
+actor "leaflet API" as API2
+
+left to right direction
+
+Rectangle "Kaart pagina" {
+    usecase "Straal aanpassen van de cirkel waaruit cafes worden gekozen" as UC5
+    usecase  "De start en eind cafés aanduiden op de kaart" as UC2  
+    usecase "Het aantal cafés kiezen" as UC1 
+    usecase "Genereer cafés" as UC9
+    usecase "Kiezen van het algoritme waarmee de route berekend zal worden" as UC4
+    usecase "Nieuwe routen laten berekenen en tonen op de kaart" as UC6
+    usecase "Recentste route laten afbeelden op de kaart" as UC7
+    usecase "Route downloaden" as UC3
+    usecase "kaart afbeelden op de pagina" as UC8
+    
+
+}
+
+User--UC1
+User--UC2
+User--UC4
+User -- UC5
+User--UC6
+User--UC7
+User--UC3
+User --UC9
+API1-up-UC3
+API1-up-UC6
+API1-up-UC7
+API2 -up-UC8
+@enduml

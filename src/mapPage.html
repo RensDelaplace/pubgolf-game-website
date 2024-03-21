@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Page</title>
+    <link rel="icon" type="image/png" href="./img/start-icon.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"></script>
+    <!--<script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=IgXprome85Pf9rWajL2RuvHaqvIv6Wx2"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=IgXprome85Pf9rWajL2RuvHaqvIv6Wx2"></script>-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <script type="module" src="scripts/mapdata.js"></script>
+    <script type="module" src="scripts/dijkstra.js"></script>
+    <script type="module" src="scripts/euclidisch.js"></script>
+    <script type="module" src="scripts/Coordinate.js"></script>
+    <script type="module" src="scripts/updateMarker.js"></script>
+    <script type="module" src="scripts/downloadRoute.js"></script>
+</head>
+
+<body id="map_bg" class="blur">
+<header>
+    <script src="scripts/loadNavBar.js" onload="loadNewNavBar('Kaart')"></script>
+</header>
+<main>
+    <p class="Title_Text">Map</p>
+    <div id="map"></div>
+    <div class='container mt-3'>
+        <div class="row">
+            <div class="card-content card text-white mb-4 center">
+                <div id="stappenplan">
+                    <p class="title hoofdletters">Plan een route</p>
+                    <p class="mooi" id="rangeInstructions">Selecteer het bereik van de route</p>
+                    <label for="radius" class="hoofdletters">Straal (km):</label>
+                    <input type="range" id="radius" name="radius" min="500" max="5000" step="100" value="2300">
+                    <span id="radiusValue" class="hoofdletters"></span>
+                    <div>
+                        <button class="btn" id="start-eind">Kies start en eind</button>
+                        <button class="btn hideStartEindButton" id="set-start">Ander Startpunt</button>
+                        <button class="btn hideStartEindButton" id="set-eind">Ander Eindpunt</button>
+                    </div>
+                    <br>
+                    <p class="mooi">Selecteer het aantal Cafés op de route </p>
+                    <p>(start en eindpunt niet inbegrepen)</p>
+                    <label for="cafes" class="hoofdletters">Aantal cafés:</label>
+                    <input type="range" id="cafes" name="cafes" min="1" max="10" value="5">
+                    <span id="cafeValue" class="hoofdletters"></span>
+                    <input type="checkbox" id="dynamicRange" name="dynamicRange">
+                    <label for="dynamicRange" class="hoofdletters">Dynamisch aantal cafés</label>
+                    <div>
+                        <button class="btn" id="randomCafes">Genereer cafes</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="mooi">Kies manier van routeberekening</p>
+                    <label for="euclidisch" class="hoofdletters">euclidisch</label>
+                    <input id="euclidisch" class="btn" type="radio" name="algoritme">
+                    <label for="dijkstra" class="hoofdletters">Dijkstra</label>
+                    <input id="dijkstra" class="btn" type="radio" name="algoritme">
+                    <label for="branch&bound" class="hoofdletters">Branch and bound</label>
+                    <input id="branch&bound" class="btn" type="radio" name="algoritme">
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="recent">Recentste route</button>
+                    <button id="route" class="btn">Nieuwe route zoeken</button>
+                </div>
+                <span id="download-span">
+                    <button class="btn" id="download">Download</button>
+                    <div id="help-icon-download">
+                        <p>&#128712;</p>
+                    </div>
+                    <div id="download-tooltip">
+                        <p> WAARSCHUWING: De GPX-data werkt niet op elke website!
+                            <a class="weblink" href="https://umap.openstreetmap.fr/nl/map/new/">Openstreetmap</a> werkt wel bijvoorbeeld.</p>
+                    </div>
+                </span>
+            </div>
+            <div class="card-content card text-white mb-4 center">
+                <p class="title hoofdletters">Gemaakte route</p>
+                <div id="route-lijst"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="center">
+    <script src="scripts/loadFooter.js" onload="loadNewFooter()"></script>
+    <i>© openrouteservice.org by HeiGIT | Map data © OpenStreetMap contributors</i>
+</footer>
+</body>
+</html>

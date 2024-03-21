@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm Page</title>
+    <link rel="icon" type="image/png" href="./img/start-icon.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/92fedbc2c7.js" crossorigin="anonymous"></script>
+    <script type="module" src="scripts/algoritmeVisu.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body id="index_bg" class="blur">
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <script src="scripts/loadNavBar.js" onload="loadNewNavBar('Algoritme')"></script>
+</header>
+<main>
+    <div class='container center'>
+        <p class="Title_Text">Algoritme</p>
+        <p class="credit_text">Info over de algoritmes die we gebruiken</p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <p class="title algo-titel">Dijkstra</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row">
+                            <p class="mooi hoofdletters">uitleg</p>
+                            <p>Dit algoritme gaat over alle mogelijk combinaties van paden tussen het startpunt en
+                                eindpunt. Er wordt telkens gecontroleerd of de route korter is dan de huidige
+                                kortste route. Als dit zo is, word de huidig kortste route geüpdate. Het algoritme
+                                zal op het einde deze kortste route teruggeven.</p>
+                        </div>
+                        <div class="row">
+                            <div class="voor-en-nadelen container"></div>
+                            <div class="row">
+                                <div class="col-sm center">
+                                    <p class="mooi hoofdletters">voordelen</p>
+                                    <ul class="voordelen voor-en-nadelen-sommatie">
+                                        <li>Eenvoudig te implementeren</li>
+                                        <li>Vind de aller kortste route</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm center">
+                                    <p class="mooi hoofdletters">nadelen</p>
+                                    <ul class="nadelen voor-en-nadelen-sommatie">
+                                        <li>Traag</li>
+                                        <li>Gebruikt veel geheugen</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-algo-small w-100">
+                            <img class="card-img-top algo-image" src="img/map_dijkstra.png" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <p class="card-text mooi">tijd: 150 ms</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <p class="card-text mooi">afstand: 8,82 km</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p class="title algo-titel">Euclidisch</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row">
+                            <p class="mooi hoofdletters">uitleg</p>
+                            <p>Dit algoritme werkt op een gelijkaardige manier als Dijkstra alleen wordt er hier een
+                                andere methode gebruikt om de afstanden te berekenen (in vogelvlucht).
+                                Dit algoritme doet telkens zware bewerkingen terwijl dijkstra 1 keer een bestand
+                                inleest.</p>
+                        </div>
+                        <div class="row">
+                            <div class="voor-en-nadelen container"></div>
+                            <div class="row">
+                                <div class="col-sm center">
+                                    <p class="mooi hoofdletters">voordelen</p>
+                                    <ul class="voordelen voor-en-nadelen-sommatie">
+                                        <li>Zelfde voordelen als dijkstra</li>
+                                        <li>Sneller voor korte routes</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm center">
+                                    <p class="mooi hoofdletters">nadelen</p>
+                                    <ul class="nadelen voor-en-nadelen-sommatie">
+                                        <li>Zelfde nadelen als dijkstra</li>
+                                        <li>Trager voor lange routes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-algo-small w-100">
+                            <img class="card-img-top algo-image" src="img/map_euclidisch.png" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <p class="card-text mooi">tijd: 162 ms</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <p class="card-text mooi">afstand: 8,86 km</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p class="title algo-titel">Branch and Bound</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row">
+
+                            <p class="mooi hoofdletters">uitleg</p>
+                            <p>Dit algoritme werkt door een heuristic te gebruiken, in ons geval de lower bound die
+                                per subroute van de totale route kan inschatten hoe lang die is. Per subroute word
+                                de route geselecteerd die de kleinste lower bound heeft en al de rest wordt niet
+                                meer naar gekeken. Dit herhaal je tot je alle locaties hebt bezocht en je tot een
+                                conclusie komt.</p>
+                        </div>
+                        <div class="row">
+                            <div class="voor-en-nadelen container"></div>
+                            <div class="row">
+                                <div class="col-sm center">
+                                    <p class="mooi hoofdletters">voordelen</p>
+                                    <ul class="voordelen voor-en-nadelen-sommatie">
+                                        <li>Het algoritme is veel sneller dan brute force of greedy algoritmes op
+                                            grote schalen
+                                        </li>
+                                        <li>Het verbruikt minder rekenkracht dan bv. Dijkstra en Euclidisch</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm center">
+                                    <p class="mooi hoofdletters">nadelen</p>
+                                    <ul class="nadelen voor-en-nadelen-sommatie">
+                                        <li>Veel moeilijker te implementeren dan Dijkstra</li>
+                                        <li>Is niet altijd 100% accuraat</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-algo-small w-100">
+                            <img class="card-img-top algo-image" src="img/map_bnb.png" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <p class="card-text mooi">tijd: 19 ms</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <p class="card-text mooi">afstand: 9,49 km</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row center">
+                    <p class="title">Werking Branch and Bound</p>
+                    <img class="algo-image" id="vb-bnb" src="img/vb_bnb.png">
+                    <p class="title">Visualisatie Branch and bound</p>
+                    <div id="map"></div>
+                    <div class='container mt-3'>
+                        <div class="row">
+                            <div class="card-content card text-white mb-4 center">
+                                <div class="card-body">
+                                    <p>Genereer cafés tot het goed lijkt en druk dan op de knop om de werking van het
+                                        branch and bound algoritme te zien.</p>
+                                    <button class="btn" id="toonRoute">geef werking weer</button>
+                                    <button class="btn" id="genereer">genereer cafes</button>
+                                    <p>De lijnen in vogelvlucht zijn enkel ter illustratie van het algoritme. De route wordt bepaald
+                                        met de werkelijke afstanden.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Ps. de tijd hier aangegeven hangt af van hardware, maar algemeen geldt B&B > Dijkstra > Euclidisch in
+                snelheid. Op kleine afstanden is het verschil echter te verwaarlozen.
+            </p>
+        </div>
+    </div>
+</main>
+<footer>
+    <script src="scripts/loadFooter.js" onload="loadNewFooter()"></script>
+</footer>
+</body>
+</html>

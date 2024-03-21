@@ -1,0 +1,20 @@
+@startuml
+:voeg startlocatie toe aan output;
+:delete startlocatie toe van dataset;
+while (dataset > 0)
+    :min = 200039;
+    :minvalue = None;
+    group foreach (coordinaat)
+        :afstand = distance(coordinaat, dataset[laatste]);
+        if (afstand < min) then (yes)
+            :min = afstand;
+            :min_value = coordinaat;
+        else (no)
+            stop
+        endif
+    end group
+    :voeg min_value toe aan output;
+endwhile
+:return output;
+stop
+@enduml

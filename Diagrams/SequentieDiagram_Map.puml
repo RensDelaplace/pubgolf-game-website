@@ -1,0 +1,36 @@
+@startuml Map_Interaction
+
+participant Program
+actor User
+participant Algoritme
+Participant Query
+participant Kaart
+
+Program ->> Kaart: LOAD Kaart
+activate Kaart
+
+
+Program -> User: GET Query data
+activate User
+User --> Program: RETURN Query data
+deactivate User
+
+Program -> Query: GET Cafes
+activate Query
+Query --> Program: RETURN Cafes
+deactivate Query
+
+Program -> Algoritme: GET Path between nodes
+activate Algoritme
+Algoritme --> Program: RETURN Path between nodes
+deactivate Algoritme
+
+Program -> Query: GET Route
+activate Query
+Query --> Program: RETURN Route
+deactivate Query
+
+Program ->> Kaart: DISPLAY Route
+
+
+@enduml

@@ -1,0 +1,129 @@
+{
+    "penalties":[
+        {
+            "Type": "Standaard",
+            "naam": "Misser (Standaard)",
+            "beschrijving": "+4 slagen als je een drankje niet opdrinkt"
+
+        },
+        {
+            "Type": "Standaard",
+            "naam": "Glas neerzetten",
+            "beschrijving": "+1 slag per keer je het glas neerzet"
+
+        },
+        {
+            "Type": "Standaard",
+            "naam": "Verspilling",
+            "beschrijving": "+1 slag als je drank morst"
+
+        },
+        {
+        "Type": "Standaard",
+        "naam": "Alcoholvrije zone",
+        "beschrijving": "+2 slagen voor het bestellen van een alcoholvrij drankje tijdens het spel."
+
+        },
+        {
+            "Type": "Standaard",
+            "naam": "Drankverrader",
+            "beschrijving": "+2 slagen voor het bestellen van een ander drankje dan afgesproken."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Water Hazard",
+            "beschrijving": "+2 slagen voor een toiletbezoek"
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Slip up",
+            "beschrijving": "+2 slagen als je valt"
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Wind Hazard",
+            "beschrijving": "+2 slagen als je een scheet laat"
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Klungel",
+            "beschrijving": "+2 slagen als je je glas laat vallen"
+
+        },
+
+        {
+            "Type": "Negatief",
+            "naam": "Buiten de lijnen",
+            "beschrijving": "+2 slagen voor het verlaten van de bar"
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Drankje wisselen",
+            "beschrijving": "+2 slagen voor het wisselen van drankjes of uit het verkeerde glas drinken."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Verloren bal",
+            "beschrijving": "+3 slagen voor het kwijtraken van een drankje."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Tee-time",
+            "beschrijving": "+1 slag voor het langer dan 5 minuten doen over het opdrinken van een drankje."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Vechtersbaas",
+            "beschrijving": "+3 slagen voor het in een fysieke confrontatie raken met een andere speler."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "foute boel",
+            "beschrijving": "+4 slagen voor het flauwvallen of kotsen voordat alle holes zijn gespeeld."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Dubieuze Opmerking",
+            "beschrijving": "+1 slag voor het maken van een opmerking over iemands dronkenschap."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Knoeier's Boete",
+            "beschrijving": "+2 slagen voor het omstoten van het drankje van iemand anders."
+
+        },
+        {
+            "Type": "Negatief",
+            "naam": "Ruw terrein",
+            "beschrijving": "+2 slagen voor het morsen van een drankje op iemands anders kleding."
+
+        },        {
+            "Type": "Negatief",
+            "naam": "Giecheltaks",
+            "beschrijving": "+1 slag voor het lachen met een woordgrap."
+
+        },        {
+            "Type": "Negatief",
+            "naam": "telefoonvrije zone",
+            "beschrijving": "+1 slag voor het gebruiken van je telefoon tijdens het spel."
+
+        },        {
+            "Type": "Negatief",
+            "naam": "Telefoonflop",
+            "beschrijving": "+1 slag voor het beantwoorden van een telefoongesprek tijdens het spel."
+
+        }
+
+    ]
+}

@@ -1,0 +1,58 @@
+
+@startuml Game_Interaction
+actor User
+participant Game
+Participant Player
+participant Bar
+database SessionStorage
+participant "Penalties JSONFile" as Penalties
+
+==Initialization==
+User -> SessionStorage: haal nodige informatie op
+User -> Game: new Game(spelerNamen, barNamen)
+activate Game
+group foreach storageSpeler
+Game -> Player: new Player(naam, score)
+activate Player
+Player->Player: addToScorebord
+end
+group foreach storageBar
+Game -> Bar: new Bar(naam)
+activate Bar
+Bar->>Bar: async add()
+group while (penalties < 5)
+Bar->> Penalties: fetch random penalty
+Penalties-> Bar:random penalty
+end
+end
+
+==tijdens spel==
+group voor elke bar
+group if penalty
+User -> Game: addPoint(player)
+Game -> Player: AddScore(score)
+Game->Game: UpdateRanking
+end
+User->Game: volgende bar
+Game->Game: nextBar
+Game ->SessionStorage: sessionStorage.setItem('activeBar', this.activeBar)
+end 
+Game -> Game: gameDone
+Game -> Game: restart
+Game -> SessionStorage: reset all variables
+deactivate Game
+deactivate Bar
+deactivate Player
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

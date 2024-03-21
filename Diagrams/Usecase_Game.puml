@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam actorStyle awesome
+actor "Gebruiker" as user
+
+rectangle "Game pagina" {
+    usecase  UC1 as "De namen van alle spelers ingeven"
+    usecase  UC2  as "Score aanpassen
+    --
+    slagen toevoegen bij spelers die de regels overtreden
+    "
+    usecase UC3 as "aangeven dat de spelers klaar zijn
+    /naar volgend café gaan"
+    usecase UC3 as "Het zien van de eindstand"
+}
+
+
+user -- UC1
+user -- UC2
+user -- UC3
+@enduml

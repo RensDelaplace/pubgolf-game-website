@@ -1,0 +1,18 @@
+@startuml
+:min = Number.MAX_VALUE;
+:allePermutaties = permuteer(data);
+group forEach(allePermutaties) -> permutatie
+    :afstand = getDistance(startpunt, permutatie[0]);
+    group forEach(permutatie.slice(1))
+        :afstand += getDistance(permutatie[huidige], permutatie[volgende]);
+    end group
+        :afstand += getDistance(permutatie[laatste], eindpunt);
+    if (afstand < min) then (yes)
+        :min = afstand;
+        :kortsteRoute = permutatie;
+    else (no)
+    endif
+end group
+:return kortsteRoute;
+stop
+@enduml

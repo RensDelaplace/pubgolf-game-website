@@ -1,0 +1,47 @@
+@startuml Klassendiagram pubgolf
+skinparam ClassAttributeIconSize 0
+
+class Game {
+  - activeBar: int
+  - players: Player[]
+  - bars: Bar[]
+  - barSec: any
+  + constructor(playerStorage: any, bars: any, activeBar: any)
+  + setPlayers(playerStorage: any): void
+  + nextbar(): void
+  + updateRanking(): void
+  + addStandardPenalties(): Promise<void>
+  + gameDone(): void
+  + restart(): void
+
+}
+
+class Bar {
+  - naam: string
+  - loc: string
+  - card: any
+  + constructor(bar: any)
+  + hide(): void
+  + add(): Promise<void>
+  + setActive(): void
+}
+
+class Player {
+  - id: number
+  - _name: string
+  - _score: number
+  + teller: number (static)
+  + constructor(name: string, score: number)
+  + name: string (get/set)
+  + score: number (get/set)
+  + addPoint(): void
+  + addToScorebord(position: any): void
+  + removeButton(): void
+}
+
+
+Game "1" *-- "1..*" Player
+Game "1" *-- "1..*" Bar
+
+
+@enduml

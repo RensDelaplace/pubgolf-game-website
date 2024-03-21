@@ -1,0 +1,50 @@
+@startuml Klassendiagram pubgolf
+skinparam ClassAttributeIconSize 0
+Bar "1" *-- "*" Penalty: bezit
+Game "1" *-- "*" Player: heeft
+Game "1" *-- "*" Bar: heeft
+Game *-- Scorebord: heeft een
+'relaties nog bepalen
+Class Game{
+    -pubs:Bar[]
+    -players:Player[]
+    -currentBar:Bar
+    +Game(playerNamen:string[], barNaam:string[]) //bars uit map, players uit form
+    -scorebord:Scorebord
+    +addBar(index:int, penalty:Penalty):void
+    +addPenalty(player:Player):void
+    +NextBar():void
+    +GetCurrentBar():Bar
+}
+Class Scorebord{
+    -tussenstand:Map<naam:string, score:int>
+    +UpdateScores(players: Player[])
+    +Scorebord(players:Player[])
+    -Show():void
+}
+Class Bar{
+    -naam:string
+    -penalty:Penalty[]
+    +Bar(naam:string, penaltyOmschrijving:string)
+    +getPenalty():Penalty[]
+}
+Class Player{
+    -naam:string
+    -totaleScore:int
+    +Player(naam:string)
+    +addScore(score:int)
+    +getTotaleScore():int
+    +getName():string
+}
+Class Penalty{
+    -omschrijving:string 
+    -{const} penaltyScore:int
+    +getOmschrijving():string
+    +getPenaltyScore():int
+    +Penalty(omschrijving:string)
+}
+@enduml
+
+->
+->>
+-->

@@ -1,0 +1,341 @@
+#map {
+    height: 5vw;
+    width: 5vw;
+    max-width: 95%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+li{
+    line-height: 0.8;
+}
+
+label {
+    border: 1px solid #dad7cd;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-left: 15px;
+  }
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0e0202;
+    font-family: 'Work Sans', sans-serif;
+    color: #606c38;
+    overflow-x: hidden;
+}
+#game_bg{
+    background-image: url("img/bar3.jpg");
+}
+#index_bg{
+    background-image: url("img/gent.jpg");
+}
+#map_bg{
+    background-image: url("img/wandelen2.jpg");
+}
+
+.blur{
+    backdrop-filter: blur(5px);
+}
+
+.navbar-nav .nav-item {
+    color: #a3b18a;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.navbar-nav .nav-item:hover {
+    text-decoration-line: underline;
+}
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    padding: 0.4em;
+    background: #dda15e;
+    padding: 10px 20px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fefae0;
+}
+
+.btn:hover {
+    color: #dad7cd;
+    background: #bc6c25;
+    transition: all 0.3s ease;
+
+}
+.btn:active {
+    outline: none;
+}
+#player-name{
+    background: #fefae0;
+    border: none;
+    color: #588157;
+}
+
+#map{
+    height: 600px;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+input[type="number"],
+input[type="range"] {
+    width: 50%;
+}
+
+.card{
+    border-radius: 30px;
+    margin-bottom: 20px;
+    align-content: center;
+    padding: 0.4em;
+    background: #fefae0;
+}
+.card-header {
+    vertical-align: center;
+}
+table{
+    align-items: center;
+    margin: auto;
+}
+
+.card-active{
+    background: #e1dcc0;
+    border: 0.3rem solid #606c38;
+    padding: 0.4em;
+
+}
+
+
+.Title_Text {
+    color: #fefae0;
+    margin: 3vw;
+    font-size: 8vw;
+    border-bottom: 3px solid #bc6c25;
+    font-weight: 900;
+}
+
+td, th {
+    padding:10px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+.navbar{
+    background: #fefae0;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1;
+    height: 60px;
+    padding-bottom: 0px;
+}
+#logo{
+    color: #606c38;
+    font-size: 2vw;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-weight: 900;
+}
+.hoofdletters {
+    color: #283618;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.mooi {
+    color: #283618;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1;
+}
+.title{
+    margin-top: 20px;
+    vertical-align: center;
+    font-weight: 900;
+    color: #606c38;
+}
+.addPoint{
+    margin-right: 0px;
+}
+
+#spelregels{
+    background: #fefae0;
+    border-top: 2px solid #bc6c25;
+}
+
+p{
+    color: #283618;
+    text-align: center;
+}
+#next{
+    margin-bottom: 10px;
+}
+
+.img_button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button_img{
+    display: block;
+    width: 380px;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.img_button:hover img {
+    transform: scale(1.1);
+}
+.button_text {
+    color: #fefae0;
+    margin: 20px;
+    font-size: 3rem;
+    border-bottom: 3px solid #bc6c25;
+    font-weight: 900;
+}
+.credit_text {
+    color: #fefae0;
+    font-size: 1rem;
+    font-weight: 900;
+}
+.footer_text {
+    color: lightgray;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #fefae0;
+    }
+}
+.center{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+label{
+    border: none;
+    display: inline;
+    text-align: center;
+}
+
+.navbar-nav > .active > a > .hoofdletters {
+    color: #bc6c25;
+}
+
+.hideStartEindButton{
+    display: none;
+}
+
+.image-container img {
+    max-width: 200px;
+}
+.algo-card{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.algo-image{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: 0.1rem solid #606c38;;
+}
+.card-algo-small{
+    background: #e1dcc0;
+    border: 0.3rem solid #606c38;
+    min-width: 100px;
+}
+
+.voor-en-nadelen-sommatie{
+    list-style-type: none;
+    padding: 0;
+}
+
+.voor-en-nadelen-sommatie li {
+    position: relative;
+    padding-left: 20px;
+    padding-top: 10px;
+    line-height: 1;
+}
+.voor-en-nadelen-sommatie li::before {
+    font-family: "Font-Awesome";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+}
+.voordelen li::before {;
+    content: "\2714";
+}
+.nadelen li::before {
+    content:  "\2716";
+}
+.algo-titel{
+    font-size: 2vw;;
+}
+
+.w18r{
+    width: 18rem;
+}
+
+li p {
+    line-height: 1.2;
+}
+#vb-bnb{
+    width: 50vw;
+}
+
+#download-span{
+    white-space: nowrap;
+}
+
+#help-icon-download{
+    display: inline-block;
+}
+
+#download-tooltip{
+    display: none;
+}
+
+#help-icon-download:hover + #download-tooltip, #download-tooltip:hover{
+    display: block;
+}
+
+.weblink, .weblink:visited, .weblink:active{
+    text-decoration: none;
+    font-weight: bold;
+    color: #283618;
+}
+
+.weblink:hover{
+    text-decoration: underline;
+}

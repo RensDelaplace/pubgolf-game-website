@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam actorStyle awesome
+
+actor "Gebruiker" as user
+
+Rectangle "Website" {
+    usecase "naar de home tab gaan" as UC1
+    usecase "naar de kaart gaan" as UC2
+    usecase "naar het spel gaan" as UC3
+    usecase "Het leaderboard bekijken" as UC4
+    usecase "naar de algoritme tab gaan" as UC5
+}
+
+Rectangle Home {
+    usecase "Informatie lezen over de website" as UC6
+}
+
+Rectangle "Algoritme tab" as algoritme {
+    usecase  UC7 as "Informatie lezen overr het algoritme 
+    en hoe het in zijn werking gaat"
+}
+
+user -- UC1
+user -- UC2
+user --UC3
+user--UC4
+user--UC6
+user--UC7
+@enduml

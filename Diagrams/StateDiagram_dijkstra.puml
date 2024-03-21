@@ -1,0 +1,20 @@
+@startuml
+start
+:graph = initGraph;
+:min = Number.MAX_VALUE;
+:allePermutaties = permuteer(data);
+group forEach(allePermutaties) -> permutatie
+    :afstand = parseFloat(graph[0][lineNumbers.indexOf(permutation[0])]);
+    group forEach(permutatie.slice(1))
+        :afstand += parseFloat(graph[lineNumbers.indexOf(permutation[i])][lineNumbers.indexOf(permutation[i+1])]);
+    end group
+        :afstand += parseFloat(graph[lineNumbers.indexOf(permutation[permutation.length-1])][endIndex]);
+    if (afstand < min) then (yes)
+        :min = afstand;
+        :kortsteRoute = permutatie;
+    else (no)
+    endif
+end group
+:return kortsteRoute;
+stop
+@enduml
